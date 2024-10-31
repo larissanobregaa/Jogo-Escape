@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lxoqgnrfu2vy"]
+
+[ext_resource type="Texture2D" uid="uid://y860fgboy880" path="res://tela proxima fase- escape (1).png" id="1_xkwna"]
+
+[node name="Tela proxima fase" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -30.0
+offset_top = -7.0
+offset_right = 1890.0
+offset_bottom = 1073.0
+texture = ExtResource("1_xkwna")
+stretch_mode = 2

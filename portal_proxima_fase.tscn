@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://l5kdjpxb5gkb"]
+
+[ext_resource type="Texture2D" uid="uid://d3n2outucmvw8" path="res://Door (32x32).png" id="1_edmkd"]
+[ext_resource type="Script" path="res://portal_proxima_fase.gd" id="1_gxatm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdcbv"]
+size = Vector2(59, 27)
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_gxatm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_sdcbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_edmkd")
+flip_h = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

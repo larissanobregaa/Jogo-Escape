@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw501t4vhopx4"]
+
+[ext_resource type="Texture2D" uid="uid://divki0lvn4j88" path="res://tela proxima fase- escape.png" id="1_wigdl"]
+
+[sub_resource type="FontVariation" id="FontVariation_kql4q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvf0b"]
+bg_color = Color(0.572549, 0.737255, 0.584314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -25.0
+offset_right = 1175.0
+offset_bottom = 675.0
+texture = ExtResource("1_wigdl")
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_direction = 1
+layout_mode = 0
+offset_left = 498.0
+offset_top = 455.0
+offset_right = 709.0
+offset_bottom = 552.0
+theme_override_colors/font_focus_color = Color(0, 0.301961, 0, 1)
+theme_override_colors/font_color = Color(6.31716e-07, 0.31663, 2.40654e-07, 1)
+theme_override_fonts/font = SubResource("FontVariation_kql4q")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvf0b")
+text = "START"
