@@ -18,9 +18,16 @@ func _process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
 		velocity.y -= 400
 		
-	if velocity.x > 0 and is_on_floor():
+	if velocity.x != 0 and is_on_floor():
 		$AnimatedSprite2D.play("run")
+	elif is_on_floor():
+		$AnimatedSprite2D.play("idle")
 	else:
-		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play("mid air")
+		
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
 		
 	move_and_slide()
