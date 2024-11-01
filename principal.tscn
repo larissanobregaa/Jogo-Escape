@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bv4upg7gjiq0q"]
+[gd_scene load_steps=23 format=4 uid="uid://bv4upg7gjiq0q"]
 
 [ext_resource type="Script" path="res://principal.gd" id="1_cql0y"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="3_1iuue"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b278x5qn7jk6d" path="res://parallax background/plx-5.png" id="7_wbnxm"]
 [ext_resource type="PackedScene" uid="uid://d3tc7xnc7ky0k" path="res://espinhos.tscn" id="8_8crel"]
 [ext_resource type="PackedScene" uid="uid://l5kdjpxb5gkb" path="res://portal_proxima_fase.tscn" id="9_ypj1v"]
+[ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="12_a6mwx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo7n"]
 texture = ExtResource("4_iuobs")
@@ -1297,6 +1298,21 @@ texture = ExtResource("4_iuobs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7uo7n")
 
+[sub_resource type="Animation" id="Animation_oain2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 190)]
+}
+
 [sub_resource type="Animation" id="Animation_7j4xk"]
 resource_name = "novaanimacao"
 length = 2.0
@@ -1312,21 +1328,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(427, 250), Vector2(427, 190)]
-}
-
-[sub_resource type="Animation" id="Animation_oain2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(427, 190)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_134tt"]
@@ -1360,6 +1361,21 @@ texture = ExtResource("4_iuobs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fvbr4")
 
+[sub_resource type="Animation" id="Animation_ugh1j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 50)]
+}
+
 [sub_resource type="Animation" id="Animation_4ct73"]
 resource_name = "movimento"
 loop_mode = 2
@@ -1374,21 +1390,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 100), Vector2(0, 150)]
-}
-
-[sub_resource type="Animation" id="Animation_ugh1j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 50)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7ewlg"]
@@ -1552,3 +1553,8 @@ tile_set = SubResource("TileSet_vbnik")
 libraries = {
 "": SubResource("AnimationLibrary_7ewlg")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_a6mwx")
+volume_db = -9.905
+autoplay = true

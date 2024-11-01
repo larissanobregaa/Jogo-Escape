@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu2jdyjh3l6ql"
+path="res://.godot/imported/collect points.mp3-6c8e472fce54505f81de29f4404fdf23.mp3str"
+
+[deps]
+
+source_file="res://Musica/collect points.mp3"
+dest_files=["res://.godot/imported/collect points.mp3-6c8e472fce54505f81de29f4404fdf23.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
