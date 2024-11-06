@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://da40xbhbhqwdp"]
+
+[ext_resource type="Texture2D" uid="uid://c32o2oa6x6vkm" path="res://tela_inicial.jpg" id="1_7lcsf"]
+[ext_resource type="Script" path="res://title_screen.gd" id="1_yw7rs"]
+[ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="2_ncrik"]
+
+[sub_resource type="FontVariation" id="FontVariation_hiniv"]
+base_font = ExtResource("2_ncrik")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3b6l"]
+bg_color = Color(0.352473, 0.283958, 0.181032, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w847o"]
+bg_color = Color(0.352473, 0.283958, 0.181032, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwud6"]
+bg_color = Color(0.305882, 0.239216, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o68ie"]
+bg_color = Color(0.352473, 0.283958, 0.181032, 1)
+
+[sub_resource type="Theme" id="Theme_yiibo"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 35
+Button/fonts/font = SubResource("FontVariation_hiniv")
+Button/styles/focus = SubResource("StyleBoxFlat_p3b6l")
+Button/styles/hover = SubResource("StyleBoxFlat_w847o")
+Button/styles/normal = SubResource("StyleBoxFlat_rwud6")
+Button/styles/pressed = SubResource("StyleBoxFlat_o68ie")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yw7rs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_7lcsf")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 592.0
+offset_right = 750.0
+offset_bottom = 625.0
+theme = SubResource("Theme_yiibo")
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bv4upg7gjiq0q"]
+[gd_scene load_steps=26 format=4 uid="uid://bv4upg7gjiq0q"]
 
 [ext_resource type="Script" path="res://principal.gd" id="1_cql0y"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="3_1iuue"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://d3tc7xnc7ky0k" path="res://espinhos.tscn" id="8_8crel"]
 [ext_resource type="PackedScene" uid="uid://l5kdjpxb5gkb" path="res://portal_proxima_fase.tscn" id="9_ypj1v"]
 [ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="12_a6mwx"]
+[ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="13_3vy2o"]
+[ext_resource type="Script" path="res://score_label.gd" id="14_ihdx3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo7n"]
 texture = ExtResource("4_iuobs")
@@ -1398,6 +1400,9 @@ _data = {
 "movimento": SubResource("Animation_4ct73")
 }
 
+[sub_resource type="Theme" id="Theme_uwe0t"]
+Label/fonts/font = ExtResource("13_3vy2o")
+
 [node name="Principal" type="Node2D"]
 script = ExtResource("1_cql0y")
 
@@ -1558,3 +1563,21 @@ libraries = {
 stream = ExtResource("12_a6mwx")
 volume_db = -9.905
 autoplay = true
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 137.0
+offset_bottom = 42.0
+theme = SubResource("Theme_uwe0t")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Score: 0"
+script = ExtResource("14_ihdx3")
