@@ -1,6 +1,6 @@
 extends Label
 
-var score = 0
+var score = 0000
 
 func _ready():
 	# Conecta o sinal 'moeda_coletada' de cada moeda na cena ao ScoreLabel
@@ -9,4 +9,4 @@ func _ready():
 
 func _on_moeda_coletada():
 	score += 1  # Incrementa a pontuação
-	text = str(score)
+	text = "Score: " + str(score)

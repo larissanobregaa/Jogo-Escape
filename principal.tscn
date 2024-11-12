@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bv4upg7gjiq0q"]
+[gd_scene load_steps=27 format=4 uid="uid://bv4upg7gjiq0q"]
 
 [ext_resource type="Script" path="res://principal.gd" id="1_cql0y"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="3_1iuue"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bkev1joud0vrt" path="res://chave.tscn" id="7_sdsei"]
 [ext_resource type="Texture2D" uid="uid://b278x5qn7jk6d" path="res://parallax background/plx-5.png" id="7_wbnxm"]
 [ext_resource type="PackedScene" uid="uid://d3tc7xnc7ky0k" path="res://espinhos.tscn" id="8_8crel"]
+[ext_resource type="AudioStream" uid="uid://bu2jdyjh3l6ql" path="res://Musica/collect points.mp3" id="9_6gubx"]
 [ext_resource type="PackedScene" uid="uid://l5kdjpxb5gkb" path="res://portal_proxima_fase.tscn" id="9_ypj1v"]
 [ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="12_a6mwx"]
 [ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="13_3vy2o"]
@@ -1401,6 +1402,9 @@ _data = {
 }
 
 [sub_resource type="Theme" id="Theme_uwe0t"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 40
 Label/fonts/font = ExtResource("13_3vy2o")
 
 [node name="Principal" type="Node2D"]
@@ -1472,11 +1476,20 @@ tile_set = SubResource("TileSet_gnarn")
 [node name="Chave6" parent="TileMapLayer" instance=ExtResource("7_sdsei")]
 position = Vector2(-841, -258)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TileMapLayer/Chave6"]
+stream = ExtResource("9_6gubx")
+
 [node name="Chave2" parent="TileMapLayer" instance=ExtResource("7_sdsei")]
 position = Vector2(-235, 72)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TileMapLayer/Chave2"]
+stream = ExtResource("9_6gubx")
+
 [node name="Chave" parent="TileMapLayer" instance=ExtResource("7_sdsei")]
 position = Vector2(13, 72)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TileMapLayer/Chave"]
+stream = ExtResource("9_6gubx")
 
 [node name="Chave3" parent="TileMapLayer" instance=ExtResource("7_sdsei")]
 position = Vector2(42, 349)
@@ -1570,14 +1583,23 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ScoreLabel" type="Label" parent="UserInterface"]
-layout_mode = 0
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="HUD/Control"]
 offset_left = 25.0
 offset_top = 11.0
-offset_right = 137.0
-offset_bottom = 42.0
+offset_right = 130.0
+offset_bottom = 38.0
 theme = SubResource("Theme_uwe0t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "Score: 0"
 script = ExtResource("14_ihdx3")
