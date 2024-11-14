@@ -30,4 +30,12 @@ func _process(delta):
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
 		
+	
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().name == 'Lava':
+			get_tree().reload_current_scene()
+			
+		

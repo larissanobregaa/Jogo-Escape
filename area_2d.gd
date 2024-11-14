@@ -1,15 +1,5 @@
 extends Area2D
 
-@onready var timer = $Timer
-
-
-func _on_body_entered(body):
-	print("Se FERROU!")
-	Engine.time_scale = 0.5
-	body.get_node ("CollisionShape2D").queue_free()
-	timer.start()
-
-
-func _on_timer_timeout():
-	Engine. time_scale = 1.0
-	get_tree().reload_current_scene()
+func _on_Area2D_body_entered(body):
+	if body.name == "Personagem":  # Verifica se o objeto que entrou na área é o personagem
+		get_tree().reload_current_scene()  # Reinicia a cena atual
