@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmb28plnfuldh"
+path="res://.godot/imported/Musica tela inicial.mp3-ab29cb2c9ff5c113cfe490024f324e0e.mp3str"
+
+[deps]
+
+source_file="res://Musica/Musica tela inicial.mp3"
+dest_files=["res://.godot/imported/Musica tela inicial.mp3-ab29cb2c9ff5c113cfe490024f324e0e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

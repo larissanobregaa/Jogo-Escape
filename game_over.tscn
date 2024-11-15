@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ilhciwuvuny"]
+
+[ext_resource type="Texture2D" uid="uid://dyjkx6ft1pm0p" path="res://Game Over.png" id="1_rdlrx"]
+[ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="2_emm75"]
+
+[sub_resource type="Theme" id="Theme_xd75h"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1172.0
+offset_bottom = 650.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -8.0
+offset_top = -13.0
+offset_right = 1166.0
+offset_bottom = 662.0
+texture = ExtResource("1_rdlrx")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 569.0
+offset_right = 835.0
+offset_bottom = 647.0
+color = Color(0.556863, 0.462745, 0.313726, 1)
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 574.0
+offset_right = 832.0
+offset_bottom = 644.0
+theme = SubResource("Theme_xd75h")
+theme_override_colors/font_hover_color = Color(0.7823, 0.607117, 0.0185679, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_emm75")
+theme_override_font_sizes/font_size = 67
+text = "RESTART"

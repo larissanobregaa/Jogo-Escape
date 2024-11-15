@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://da40xbhbhqwdp"]
+[gd_scene load_steps=11 format=3 uid="uid://da40xbhbhqwdp"]
 
 [ext_resource type="Texture2D" uid="uid://c32o2oa6x6vkm" path="res://tela_inicial.jpg" id="1_7lcsf"]
 [ext_resource type="Script" path="res://title_screen.gd" id="1_yw7rs"]
 [ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="2_ncrik"]
+[ext_resource type="AudioStream" uid="uid://cmb28plnfuldh" path="res://Musica/Musica tela inicial.mp3" id="4_qlfsn"]
 
 [sub_resource type="FontVariation" id="FontVariation_hiniv"]
 base_font = ExtResource("2_ncrik")
@@ -52,5 +53,11 @@ offset_right = 750.0
 offset_bottom = 625.0
 theme = SubResource("Theme_yiibo")
 text = "START"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qlfsn")
+volume_db = -14.104
+pitch_scale = 1.14
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

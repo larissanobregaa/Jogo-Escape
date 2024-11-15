@@ -1,5 +1,6 @@
 extends Area2D
 
+@warning_ignore("unused_signal")
 signal moeda_coletada  # Sinal para acionar ao coletar moeda
 
 func _ready():

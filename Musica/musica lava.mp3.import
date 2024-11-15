@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq2w1xbo7e8wj"
+path="res://.godot/imported/musica lava.mp3-cc869985f2b886947c66acec4054c5c1.mp3str"
+
+[deps]
+
+source_file="res://Musica/musica lava.mp3"
+dest_files=["res://.godot/imported/musica lava.mp3-cc869985f2b886947c66acec4054c5c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
