@@ -4,7 +4,6 @@ var grav = 10
 var speed = 300
 
 func _process(delta):
-	
 	if !is_on_floor():
 		velocity.y += grav
 		
@@ -29,13 +28,11 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
-		
-	
+
 	move_and_slide()
-	
+
+func _physics_process(delta):
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		if collision.get_collider().name == 'Lava':
+		if collision.get_collider().name == 'Lava' and get_tree():
 			get_tree().reload_current_scene()
-			
-		
