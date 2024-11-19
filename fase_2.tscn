@@ -1548,10 +1548,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.533333, 1.03333, 1.43333, 1.93333, 2.43333, 2.93333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.633333, 1, 1.36667, 1.76667, 2.16667, 2.63333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(20, 5), Vector2(4, 5), Vector2(16, 5), Vector2(50.7629, 5), Vector2(60, 5), Vector2(50, 5), Vector2(30, 5)]
+"values": [Vector2(10, 5), Vector2(30, 5), Vector2(40, 5), Vector2(50, 5), Vector2(70, 5), Vector2(80, 5), Vector2(50, 5), Vector2(30, 5), Vector2(50, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_yqadm"]
@@ -1805,7 +1805,7 @@ pitch_scale = 2.62
 position = Vector2(-54, 498)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
-position = Vector2(20, 5)
+position = Vector2(10, 5)
 tile_map_data = PackedByteArray("AAAGAB8AAAAUAAkAAAAHAB8AAAAVAAkAAAAIAB8AAAAUAAkAAAAJAB8AAAAVAAkAAAAKAB8AAAAWAAkAAAALAB8AAAAXAAkAAAAOABAAAAAWAA0AAAAPABAAAAAXAA0AAAAQABAAAAAYAA0AAAA=")
 tile_set = SubResource("TileSet_yfkmo")
 
