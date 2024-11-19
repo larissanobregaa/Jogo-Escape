@@ -1365,7 +1365,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fvbr4")
 
 [sub_resource type="Animation" id="Animation_ugh1j"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
