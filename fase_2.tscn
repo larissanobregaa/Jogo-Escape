@@ -1804,12 +1804,12 @@ pitch_scale = 2.62
 [node name="Personagem" parent="." instance=ExtResource("10_6vs7b")]
 position = Vector2(-54, 498)
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+[node name="Plataformas" type="TileMapLayer" parent="."]
 position = Vector2(10, 5)
 tile_map_data = PackedByteArray("AAAGAB8AAAAUAAkAAAAHAB8AAAAVAAkAAAAIAB8AAAAUAAkAAAAJAB8AAAAVAAkAAAAKAB8AAAAWAAkAAAALAB8AAAAXAAkAAAAOABAAAAAWAA0AAAAPABAAAAAXAA0AAAAQABAAAAAYAA0AAAA=")
 tile_set = SubResource("TileSet_yfkmo")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMapLayer2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas"]
 libraries = {
 "": SubResource("AnimationLibrary_xc4bw")
 }
