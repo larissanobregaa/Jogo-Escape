@@ -8,7 +8,8 @@
 Links: 
 - **Miro:** https://miro.com/welcomeonboard/VHZTbFZnYUY5WElrM3g5eENSbmJvaUF4V2Rpa2g1QXRmSHNzRUpibmpKeVlwdXdNSG5Va1M4N3BYZDllSHFjVHwzNDU4NzY0NTg0NTU2MjE2MzM1fDI=?share_link_id=307650068202
 - **Trello:** https://trello.com/b/4fSj8PFl/desenv-jogos
-
+- **Itch.io:**
+  
 
 # 5W2H
 ### What (O que será feito?):
