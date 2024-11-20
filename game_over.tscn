@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://2ilhciwuvuny"]
+[gd_scene load_steps=5 format=3 uid="uid://2ilhciwuvuny"]
 
 [ext_resource type="Texture2D" uid="uid://dyjkx6ft1pm0p" path="res://Game Over.png" id="1_rdlrx"]
 [ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="2_emm75"]
+[ext_resource type="Script" path="res://button.gd" id="3_mkbxa"]
 
 [sub_resource type="Theme" id="Theme_xd75h"]
 
@@ -40,4 +41,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_emm75")
 theme_override_font_sizes/font_size = 67
-text = "RESTART"
+text = "Next fase"
+script = ExtResource("3_mkbxa")
+
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]

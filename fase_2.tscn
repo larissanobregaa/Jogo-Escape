@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://4xm0blmvjtkc"]
+[gd_scene load_steps=33 format=4 uid="uid://4xm0blmvjtkc"]
 
 [ext_resource type="Script" path="res://fase_2.gd" id="1_8oxka"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="1_xtnyq"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://bu2jdyjh3l6ql" path="res://Musica/collect points.mp3" id="13_vedja"]
 [ext_resource type="Script" path="res://label.gd" id="14_tr7si"]
 [ext_resource type="AudioStream" uid="uid://dq2w1xbo7e8wj" path="res://Musica/musica lava.mp3" id="16_fmx57"]
+[ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="18_26isq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibdox"]
 texture = ExtResource("6_ns1x0")
@@ -1813,3 +1814,8 @@ tile_set = SubResource("TileSet_yfkmo")
 libraries = {
 "": SubResource("AnimationLibrary_xc4bw")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_26isq")
+volume_db = -18.419
+autoplay = true
