@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://4xm0blmvjtkc"]
+[gd_scene load_steps=38 format=4 uid="uid://4xm0blmvjtkc"]
 
 [ext_resource type="Script" path="res://fase_2.gd" id="1_8oxka"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="1_xtnyq"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="18_26isq"]
 [ext_resource type="PackedScene" uid="uid://ybwyypukb443" path="res://bau_fim_de_jogo.tscn" id="19_0liae"]
 [ext_resource type="Script" path="res://bau_fim_de_jogo.gd" id="21_gq6i8"]
+[ext_resource type="Texture2D" uid="uid://dkabvmg1ak0jo" path="res://parabenizacao.png" id="22_ns1gw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibdox"]
 texture = ExtResource("6_ns1x0")
@@ -1560,11 +1561,6 @@ script/source = "extends TileMapLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 "
 
 [sub_resource type="Animation" id="Animation_uwvq2"]
@@ -1838,6 +1834,16 @@ stream = ExtResource("18_26isq")
 volume_db = -18.419
 autoplay = true
 
-[node name="bau_fim_de_jogo" parent="." instance=ExtResource("19_0liae")]
+[node name="bau_fim_de_jogo" parent="." node_paths=PackedStringArray("parabenizacao") instance=ExtResource("19_0liae")]
 position = Vector2(1900, 516)
 script = ExtResource("21_gq6i8")
+parabenizacao = NodePath("../TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 1161.0
+offset_bottom = 657.0
+texture = ExtResource("22_ns1gw")
+expand_mode = 1
+
+[connection signal="body_entered" from="bau_fim_de_jogo" to="bau_fim_de_jogo" method="_on_body_entered"]
