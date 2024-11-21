@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ybwyypukb443"]
+
+[ext_resource type="Texture2D" uid="uid://c4j4a4flmfnlc" path="res://baú tesouro.png" id="1_aujc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3gqb"]
+size = Vector2(51, 40)
+
+[node name="bau_fim_de_jogo" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_i3gqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.166998, 0.166998)
+texture = ExtResource("1_aujc8")
