@@ -54,7 +54,7 @@ Escape é um jogo de plataforma em 2D onde o jogador controla um personagem que 
 ## 🧩 Desafios
 
 - **Chaves:** Espalhadas pelo nível, dão pontos ao jogador.
-- **Lavas:** Se o jogador encostar, ele perde uma vida ou retorna ao início do nível.
+- **Lavas:** Se o jogador encostar, ele retorna ao início do nível.
 - **Plataformas:** Plataformas de movimento que se o jogador não tiver precisão ao pular pode retornar ao início do jogo.
 
 ## ⚙️ Mecânicas e Funcionalidades
