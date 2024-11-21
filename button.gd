@@ -10,10 +10,10 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	var next_scene = "res://fase_2.tscn"  # Altere para o caminho correto
-	var scene = load(next_scene)
+	var jogar_novamente = "res://principal.tscn"  # Altere para o caminho correto
+	var scene = load(jogar_novamente)
 	
 	if scene:  # Verifica se a cena foi carregada corretamente
-		get_tree().change_scene_to_file(next_scene)  # Muda para a próxima cena
+		get_tree().change_scene_to_file(jogar_novamente)  # Muda para a próxima cena
 	else:
-		print("Erro ao carregar a cena: ", next_scene)
+		print("Erro ao carregar a cena: ", jogar_novamente)

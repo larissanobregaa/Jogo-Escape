@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://4xm0blmvjtkc"]
+[gd_scene load_steps=37 format=4 uid="uid://4xm0blmvjtkc"]
 
 [ext_resource type="Script" path="res://fase_2.gd" id="1_8oxka"]
 [ext_resource type="Texture2D" uid="uid://lt4w7jr82oep" path="res://parallax background/plx-1.png" id="1_xtnyq"]
@@ -16,9 +16,11 @@
 [ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="13_ok3ao"]
 [ext_resource type="AudioStream" uid="uid://bu2jdyjh3l6ql" path="res://Musica/collect points.mp3" id="13_vedja"]
 [ext_resource type="Script" path="res://label.gd" id="14_tr7si"]
+[ext_resource type="Script" path="res://lava.gd" id="16_dabkm"]
 [ext_resource type="AudioStream" uid="uid://dq2w1xbo7e8wj" path="res://Musica/musica lava.mp3" id="16_fmx57"]
 [ext_resource type="AudioStream" uid="uid://dpwtxm6uhn7xk" path="res://Musica/MusicaFundo.mp3" id="18_26isq"]
 [ext_resource type="PackedScene" uid="uid://ybwyypukb443" path="res://bau_fim_de_jogo.tscn" id="19_0liae"]
+[ext_resource type="Script" path="res://bau_fim_de_jogo.gd" id="21_gq6i8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibdox"]
 texture = ExtResource("6_ns1x0")
@@ -1409,16 +1411,27 @@ texture = ExtResource("6_ns1x0")
 44:11/0 = 0
 45:11/0 = 0
 12:13/0 = 0
+12:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:13/0 = 0
+13:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:13/0 = 0
+14:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:13/0 = 0
+15:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:13/0 = 0
+16:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:13/0 = 0
+17:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:13/0 = 0
+19:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:13/0 = 0
+20:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:13/0 = 0
+22:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:13/0 = 0
+23:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:13/0 = 0
+24:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 27:13/0 = 0
 28:13/0 = 0
 30:13/0 = 0
@@ -1539,6 +1552,20 @@ texture = ExtResource("6_ns1x0")
 [sub_resource type="TileSet" id="TileSet_yfkmo"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b5u85")
+
+[sub_resource type="GDScript" id="GDScript_271w6"]
+script/source = "extends TileMapLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="Animation" id="Animation_uwvq2"]
 length = 3.0
@@ -1783,6 +1810,7 @@ script = ExtResource("14_tr7si")
 position = Vector2(-4, 5)
 tile_map_data = PackedByteArray("AAAFACEAAAAAAAAAAAAFACIAAAAAAAEAAAAGACEAAAABAAAAAAAGACIAAAABAAEAAAAHACEAAAACAAAAAAAHACIAAAACAAEAAAAIACEAAAADAAAAAAAIACIAAAADAAEAAAAJACEAAAAAAAAAAAAJACIAAAAAAAEAAAAKACEAAAABAAAAAAAKACIAAAABAAEAAAALACEAAAACAAAAAAALACIAAAACAAEAAAAMACEAAAADAAAAAAAMACIAAAADAAEAAAANACEAAAAAAAAAAAANACIAAAAAAAEAAAAOACEAAAABAAAAAAAOACIAAAABAAEAAAAPACEAAAACAAAAAAAPACIAAAACAAEAAAAQACEAAAADAAAAAAAQACIAAAADAAEAAAARACEAAAAAAAAAAAARACIAAAAAAAEAAAASACEAAAABAAAAAAASACIAAAABAAEAAAATACEAAAACAAAAAAATACIAAAACAAEAAAAUACEAAAADAAAAAAAUACIAAAADAAEAAAAFACMAAAAAAAEAAAAGACMAAAABAAEAAAAHACMAAAACAAEAAAAIACMAAAAAAAEAAAAJACMAAAABAAEAAAAKACMAAAACAAEAAAALACMAAAADAAEAAAAMACMAAAAAAAEAAAANACMAAAABAAEAAAAOACMAAAACAAEAAAAPACMAAAADAAEAAAAQACMAAAAAAAEAAAARACMAAAAAAAEAAAASACMAAAABAAEAAAATACMAAAACAAEAAAAUACMAAAADAAEAAAARACQAAAACAAEAAAASACQAAAADAAEAAAATACQAAAACAAEAAAAUACQAAAADAAEAAAAPACQAAAACAAEAAAAQACQAAAADAAEAAAANACQAAAAAAAEAAAAOACQAAAABAAEAAAAJACQAAAAAAAEAAAAKACQAAAABAAEAAAALACQAAAACAAEAAAAMACQAAAADAAEAAAAFACQAAAAAAAEAAAAGACQAAAABAAEAAAAHACQAAAACAAEAAAAIACQAAAADAAEAAABOAA4AAAAAAAEAAABOAA8AAAAAAAEAAABPAA4AAAABAAEAAABPAA8AAAABAAEAAABQAA4AAAACAAEAAABQAA8AAAACAAEAAABRAA4AAAADAAEAAABRAA8AAAAAAAEAAABSAA4AAAAAAAEAAABSAA8AAAAAAAEAAABTAA4AAAABAAEAAABTAA8AAAABAAEAAABUAA4AAAACAAEAAABUAA8AAAACAAEAAABVAA4AAAADAAEAAABVAA8AAAADAAEAAABOAA0AAAAAAAAAAABPAA0AAAABAAAAAABQAA0AAAACAAAAAABRAA0AAAADAAAAAABSAA0AAAAAAAAAAABTAA0AAAABAAAAAABUAA0AAAACAAAAAABVAA0AAAADAAAAAAA=")
 tile_set = SubResource("TileSet_pd2v8")
+script = ExtResource("16_dabkm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lava"]
 stream = ExtResource("16_fmx57")
@@ -1798,6 +1826,7 @@ zoom = Vector2(1.5, 1.5)
 position = Vector2(10, 5)
 tile_map_data = PackedByteArray("AAAGAB8AAAAUAAkAAAAHAB8AAAAVAAkAAAAIAB8AAAAUAAkAAAAJAB8AAAAVAAkAAAAKAB8AAAAWAAkAAAALAB8AAAAXAAkAAAAOABAAAAAWAA0AAAAPABAAAAAXAA0AAAAQABAAAAAYAA0AAAA=")
 tile_set = SubResource("TileSet_yfkmo")
+script = SubResource("GDScript_271w6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas"]
 libraries = {
@@ -1811,3 +1840,4 @@ autoplay = true
 
 [node name="bau_fim_de_jogo" parent="." instance=ExtResource("19_0liae")]
 position = Vector2(1900, 516)
+script = ExtResource("21_gq6i8")

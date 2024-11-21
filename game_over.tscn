@@ -41,7 +41,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_emm75")
 theme_override_font_sizes/font_size = 67
-text = "Next fase"
+text = "Reload fase"
 script = ExtResource("3_mkbxa")
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]

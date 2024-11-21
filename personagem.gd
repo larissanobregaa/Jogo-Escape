@@ -69,4 +69,4 @@ func _physics_process(_delta):
 			break
 
 func _on_timeout():
-	get_tree().reload_current_scene()  # Reinicia a cena
+	get_tree().change_scene_to_file("res://game_over.tscn") # Reinicia a cena
