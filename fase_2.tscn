@@ -1834,10 +1834,9 @@ stream = ExtResource("18_26isq")
 volume_db = -18.419
 autoplay = true
 
-[node name="bau_fim_de_jogo" parent="." node_paths=PackedStringArray("parabenizacao") instance=ExtResource("19_0liae")]
+[node name="bau_fim_de_jogo" parent="." instance=ExtResource("19_0liae")]
 position = Vector2(1900, 516)
 script = ExtResource("21_gq6i8")
-parabenizacao = NodePath("../TextureRect")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

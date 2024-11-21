@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwnwliapq5b5u"]
+
+[ext_resource type="Texture2D" uid="uid://bbck0ikjbhgi4" path="res://Página parabenização.png" id="1_0aubm"]
+[ext_resource type="Script" path="res://pagina_parabenizacao.gd" id="1_n1auh"]
+[ext_resource type="FontFile" uid="uid://cubfffllwcjhg" path="res://upheavtt.ttf" id="2_e16ow"]
+[ext_resource type="AudioStream" uid="uid://ck07qh0rhrpwa" path="res://Musica/tada-parabens.mp3" id="4_21yp5"]
+
+[node name="pagina_parabenizacao" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n1auh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 655.0
+texture = ExtResource("1_0aubm")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 520.0
+offset_right = 769.0
+offset_bottom = 603.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_e16ow")
+theme_override_font_sizes/font_size = 56
+text = "PLAY AGAIN"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_21yp5")
+pitch_scale = 1.52
+
+[connection signal="pressed" from="Button" to="." method="_on_PlayAgainButton_pressed"]
