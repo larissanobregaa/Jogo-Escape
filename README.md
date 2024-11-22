@@ -10,6 +10,7 @@ Links:
 - **Trello:**
   https://trello.com/b/4fSj8PFl/desenv-jogos
 - **Itch.io:** https://larissanobrega.itch.io/escape
+- **Protótipo figma versão mobile**: https://www.figma.com/proto/LH2U9wUcCDTGGY8grQALa0/Jogo-Escape?node-id=1-6&node-type=canvas&t=0fesLSVgXqJf7YfA-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A6
   
 
 # 5W2H
